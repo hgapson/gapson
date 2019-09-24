@@ -3,18 +3,18 @@
 }
 
 h1{
-  text-align: center;
-  margin-top: 5%;
+  text-align: left;
+  margin-top: 6%;
+  margin-left: 18%;
 }
 
-.list-group-horizontal{
-  width: 1000px;
-  margin-left: 33%;
-}
 .list-group-item{
   background-color: #80cbc4;
   width: 150px;
   color: #eceff1;
+  border: none;
+  position: relative;
+  top: 15%;
 }
 
 
@@ -62,10 +62,10 @@ header{
   margin-right: 10%;
   margin-top: -4%;
 }
-.fa-portrait{
+.profile{
  font-size: 40px;
- margin-right:0%; 
  margin-top: 0%;
+ margin-right: 80%;
 }
 .person{
   width: 100px;
@@ -81,11 +81,19 @@ header{
     font-size: 40px;
     color: #eceff1;
     position: relative;
-    left: 18%;
+    left: -30%;
     top: 40px;
 }
+.all{
+  width: 600px;
+  position: relative;
+  left: 17%;
+  top: 15%;
+}
+
 form{
     margin-top: -10%;
+    margin-left: 0%;
 }
 
 .form-row{
@@ -97,6 +105,9 @@ form{
   border-top: none;
   border-left: none;
   border-right: none;
+}
+label{
+  margin-left: -80%;
 }
 .phone{
     margin-left: -17%;
@@ -111,7 +122,7 @@ section{
     height: 150px;;
     align-items: center;
     margin-left: 25%;
-    margin-top: 5%;
+    margin-top: 4%;
     background-color: #263238;
 }
 .camera{
@@ -120,8 +131,9 @@ section{
    color: aliceblue;
 }
 .btn-success{
-  margin-left: -25%;
-  margin-top: 6%;
+  text-align: left;
+  margin-left: -60%;
+  margin-top: 15%;
 }
 
 

@@ -11,9 +11,15 @@ function AddContact(){
             <h1>
                 PHONE BOOK MANAGMENT
            </h1>
+    <ul className="list-group list-group-horizontal-lg all">
+        <li className="list-group-item">Name</li>
+        <li className="list-group-item">Phone Number</li>
+        <li className="list-group-item">Edit</li>
+        <li className="list-group-item">Delete</li>
+</ul>
           
  <Link to="/AddNumber">
-<button type="button" className="btn btn-success">+ Add contact</button>
+    <button type="button" className="btn btn-success">+ Add contact</button>
 </Link>
   </div>
       

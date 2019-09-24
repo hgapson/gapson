@@ -10,7 +10,7 @@ function Header(){
         <div className="list">       
         <header className="django">
         <div className="call">
-        <i class="fas fa-phone"></i>
+        <i className="fas fa-phone"></i>
         </div>
         
         
@@ -19,7 +19,7 @@ function Header(){
     
 
             <div className="info">
-            <i className="fas fa-portrait"></i>
+            <i className="fas fa-portrait profile"></i>
                    <label className="person"><b className="name">Admin Admin</b></label>
                 
                    <i className="fas fa-angle-down"></i>
