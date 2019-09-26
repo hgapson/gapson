@@ -1,8 +1,9 @@
 import React from 'react';
 
-import './App.css';
+import './Component.css';
 import {Link} from 'react-router-dom';
 import AddContact from './AddContact';
+
 
 
 class AddNumber extends React.Component{
@@ -20,7 +21,7 @@ class AddNumber extends React.Component{
         this.setState({
           [event.target.name]: event.target.value
         })
-        //console.log(this.state.number)
+        
     }
     onFormSubmit(event){
         event.preventDefault();
@@ -28,6 +29,7 @@ class AddNumber extends React.Component{
         this.setState({surname: this.state.surname})
         this.setState({number: this.state.number})
         console.log(this.state.fname, this.state.surname,this.state.number)
+       
     }
     render(){
         return(
