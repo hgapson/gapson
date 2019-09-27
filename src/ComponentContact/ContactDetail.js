@@ -6,9 +6,7 @@ class ContactDetail extends React.Component{
     
     render(){
         return(
-    <div className="detail"> 
-
-            <i className="fas fa-arrow-left back"></i>
+    <div> 
         
     </div>
            

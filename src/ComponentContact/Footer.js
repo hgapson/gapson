@@ -6,12 +6,12 @@ import './Component.css';
 function Footer(){
    
     return(
-        <div>
-        <footer className='coppy'>
-        <p className="copyright">&copy; 2019 django All rights reserved &nbsp; &nbsp; &nbsp;</p>
         
-                </footer>
-          </div>
+        <footer id='coppy'>
+            <p1>&copy; 2019 django All rights reserved &nbsp; &nbsp; &nbsp;</p1>
+        
+        </footer>
+          
                
               );
         }
