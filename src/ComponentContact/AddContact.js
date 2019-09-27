@@ -29,6 +29,7 @@ class AddContact extends React.Component{
       })
   
     }
+
   
     render(){
       const {contacts,errorMessage}=this.state
@@ -48,8 +49,10 @@ class AddContact extends React.Component{
               <div className="row" key={contacts.id}>
               <div className="col">{contacts.name}</div>
               <div className="col">{contacts.phone_number}</div>
-              <div className="col">{<i className="far fa-edit edit"></i>}</div>
-              <div className="col">{<i className="fas fa-trash"></i>}</div>
+              <Link to="/EditContact">
+                <div className="col">{<i className="far fa-edit edit"></i>}</div>
+              </Link>
+              <div className="col">{<i className="fas fa-trash delete"></i>}</div>
              </div>
                 ):
                 null
@@ -59,7 +62,7 @@ class AddContact extends React.Component{
   
               <Link to="/AddNumber">
                 <button type="button" className="btn btn-success">+ Add contact</button>
-            </Link>
+              </Link>
            </div>
         </div>
       )
