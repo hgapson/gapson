@@ -29,19 +29,7 @@ class EditContact extends React.Component{
          })
        }
      
-    //submit inputs
- handleSubmit=(event)=>{
-     event.preventDefault();
-     console.log(this.state)
-       axios.post('https://code-catalist-phone-book-rails.herokuapp.com/contacts',this.state)
-       .then(Response=>{
-         alert('Contact Well Saved')
-       })
-       .catch(error=>{
-         console.log(error)
-       });
-       
-  }
+   
    //handle input
    handleChange=(event)=>{
    event.preventDefault();

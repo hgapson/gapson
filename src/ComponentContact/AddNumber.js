@@ -57,8 +57,8 @@ class AddNumber extends React.Component{
              type="tel" 
              required placeholder="John" 
              id="cardCVC" 
-             name="name"
-             value={name}
+             name='name'
+             value={this.state.name}
              onChange={this.handleChange}
              />
              </div>
@@ -70,8 +70,8 @@ class AddNumber extends React.Component{
                      type="tel" 
                      required placeholder="Smith" 
                      id="cardCVC"
-                     name="name" 
-                     value={name}
+                     name='surname' 
+                     value={this.state.surname}
                      onChange={this.handleChange}
                      />
              </div>
@@ -83,17 +83,15 @@ class AddNumber extends React.Component{
              type="tel"
               required placeholder="+111 1111 1111" 
               id="cardCVC" 
-              name="phone_number"
+              name='phone_number'
               value={phone_number}
               onChange={this.handleChange}
               /></div>
         </div>
               
-        <button type="submit" className="btn btn-success button">+ Add Number</button>
-            
-               
-               
-          </form>
+            <button type="submit" className="btn btn-success button">+ Add Number</button>
+
+       </form>
               
       </div>
           )

@@ -30,7 +30,20 @@ class AddContact extends React.Component{
   
     }
 
-  
+    handleDelete(id){
+      axios.delete(`https://code-catalist-phone-book-rails.herokuapp.com/contacts/${id}`)    // axios function that reflect to API
+      let contactListCopy = this.state.contacts            // grab a copy of the todo list
+      for(let i = 0; i < contactListCopy.length; i++) {
+          let cont = contactListCopy[i]
+          if(cont.id === id) {                            // if it’s the correct ID...
+              contactListCopy.splice(i, 1)                // delete the item
+              break                                       // we’re done! break the loop
+          }
+      }
+      this.setState({contact: contactListCopy})           // we update state
+
+  }
+
     render(){
       const {contacts,errorMessage}=this.state
       return(
@@ -49,10 +62,10 @@ class AddContact extends React.Component{
               <div className="row" key={contacts.id}>
               <div className="col">{contacts.name}</div>
               <div className="col">{contacts.phone_number}</div>
-              <Link to="/EditContact">
-                <div className="col">{<i className="far fa-edit edit"></i>}</div>
-              </Link>
-              <div className="col">{<i className="fas fa-trash delete"></i>}</div>
+              
+                <div className="col">{<i className="far fa-edit edit" onClick={()=>{this.handleEdit(contacts.id)}}></i>}</div>
+           
+              <div className="col">{<i className="fas fa-trash delete" onClick={()=>{this.handleDelete(contacts.id)}} ></i>}</div>
              </div>
                 ):
                 null

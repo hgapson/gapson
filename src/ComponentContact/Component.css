@@ -51,16 +51,15 @@ height: 100%;
     position: fixed;
     width: 1600px;
     height: 90px;
-   
     top: 0;
   }
   #coppy{
    
     background-color: #000;
-    width: 1520px;
+    width: 1535px;
     height: 35px;
     bottom: 0;
-    
+    position: fixed;
     color: #eceff1;
     font-size: 14px;
   }
