@@ -1,7 +1,7 @@
 import React from 'react';
 import AddContact from './ComponentContact/AddContact';
 import AddNumber from './ComponentContact/AddNumber';
-import ContactDetail from './ComponentContact/ContactDetail';
+//import ContactDetail from './ComponentContact/ContactDetail';
 import Header from './ComponentContact/Header';
 import EditContact from './ComponentContact/EditContact';
 import Footer from './ComponentContact/Footer';
@@ -19,8 +19,7 @@ function App() {
          <Switch>
           <Route path="/" exact component={AddContact} />
           <Route path="/AddNumber" component={AddNumber} />
-          <Route path="/AddNumber" component={ContactDetail} />
-          <Route path="/EditContact" component={EditContact} />
+          <Route path="/AddContact/EditContact/id" component={EditContact} />
           </Switch>
           <Footer/>
         </div>

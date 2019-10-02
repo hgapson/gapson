@@ -12,7 +12,14 @@ class AddContact extends React.Component{
       contacts:[],
       errorMessage:""
     }
+   // this.handleClick=this.handleClick.bind(this)
     }
+   // handleClick(){
+     // this.setState((state)=>{
+         // return{contacts: state.contacts+1}
+     // })
+   // }
+   // componentDidUpdate(){}
   
     componentDidMount(){
       axios.get("https://code-catalist-phone-book-rails.herokuapp.com/contacts")
@@ -43,7 +50,7 @@ class AddContact extends React.Component{
       this.setState({contact: contactListCopy})           // we update state
 
   }
-
+   
     render(){
       const {contacts,errorMessage}=this.state
       return(
@@ -63,8 +70,9 @@ class AddContact extends React.Component{
               <div className="col">{contacts.name}</div>
               <div className="col">{contacts.phone_number}</div>
               
-                <div className="col">{<i className="far fa-edit edit" onClick={()=>{this.handleEdit(contacts.id)}}></i>}</div>
-           
+              <Link to="/EditContact">
+                <div className="col">{<i  className="far fa-edit edit" ></i>}</div>
+                </Link>               
               <div className="col">{<i className="fas fa-trash delete" onClick={()=>{this.handleDelete(contacts.id)}} ></i>}</div>
              </div>
                 ):
