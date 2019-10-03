@@ -49,7 +49,7 @@ class AddNumber extends React.Component{
         </Link>
            <section className="camera">
              
-                 <i className="fa fa-camera camera" ></i>
+                 <i className="fa fa-camera camera-section" ></i>
              </section>
       <form onSubmit={this.handleSubmit}>      
          <div className="form-row names" >

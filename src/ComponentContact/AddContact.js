@@ -67,12 +67,12 @@ class AddContact extends React.Component{
               {contacts.length?
               contacts.map(contacts=>
               <div className="row" key={contacts.id}>
-              <div className="col">{contacts.name}</div>
-              <div className="col">{contacts.phone_number}</div>
+                  <div className="col">{contacts.name}</div>
+                  <div className="col">{contacts.phone_number}</div>
               
-              <Link to="/EditContact">
-                <div className="col">{<i  className="far fa-edit edit" ></i>}</div>
-                </Link>               
+                  <Link to={`/EditContact/${contacts.id}`}>
+                  <div className="col">{<i  className="far fa-edit edit" ></i>}</div>
+                  </Link>               
               <div className="col">{<i className="fas fa-trash delete" onClick={()=>{this.handleDelete(contacts.id)}} ></i>}</div>
              </div>
                 ):
