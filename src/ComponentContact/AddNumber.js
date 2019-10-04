@@ -2,7 +2,7 @@ import React from 'react';
 import AddContact from './AddContact';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import {withRouter} from 'react-router-dom';
+
 
 
 
@@ -41,16 +41,10 @@ class AddNumber extends React.Component{
      this.setState({
        [event.target.name]: event.target.value
      })
-     
-   
       }
-
-
 
     render(){
-      if (this.state.AddContact===true){
  
-      }
      const {name,phone_number}=this.state
       return(
     <div className="Phonebook" >
@@ -101,13 +95,13 @@ class AddNumber extends React.Component{
               onChange={this.handleChange}
               /></div>
         </div>
-          <Link to="/" component={AddContact}>
-            <button type="submit" className="btn btn-success button" onChange={this.handleChange}>+ Add Number</button>
-          </Link>
+         
+            <button type="submit" className="btn btn-success button">+ Add Number</button>
+          
        </form>
               
       </div>
           )
          }
 }
-export default withRouter(AddNumber);
+export default AddNumber;

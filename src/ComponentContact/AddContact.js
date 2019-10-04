@@ -61,7 +61,7 @@ class AddContact extends React.Component{
   
               {contacts.length?
               contacts.map(contacts=>
-              <div className="row items" key={contacts.id}>
+              <div className="row" key={contacts.id}>
                   <div className="col">{contacts.name}</div>
                   <div className="col">{contacts.phone_number}</div>
               

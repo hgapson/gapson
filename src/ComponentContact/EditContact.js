@@ -32,7 +32,7 @@ class EditContact extends React.Component{
        .then((response)=>{
          console.log(response)
        })
-       alert('contactupdated')
+       alert('contact updated')
      }
      
    
