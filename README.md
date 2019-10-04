@@ -50,7 +50,7 @@ this is the page where you can find all contact list with `edit`button, `delete`
 this the button that used when you want to update contact and when you click it take you direct on `update page`
 
 ### `delete`
-this the button that used when you want to update contact and when you click it remove a contact you want to remove
+this the button that used when you want to update contact and when you click it remove a contact you want to remove and when is well deleted it gives alert message saying that contact deleted
 
 ### `add contact button`
 this the button that used when you want to add new contact and when you click,  it take you direct on ` add number page`
