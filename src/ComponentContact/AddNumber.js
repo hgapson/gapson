@@ -2,6 +2,7 @@ import React from 'react';
 import AddContact from './AddContact';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
 
 
@@ -10,13 +11,19 @@ class AddNumber extends React.Component{
         super(props);
         this.state= {
          name:"",
-         phone_number:""
+         phone_number:"",
+         firstname:'',
+         surname:'',
+         
        };
        }
         
        
       //submit inputs
    handleSubmit=(event)=>{
+     const {name,surname}=this.state;
+     const firstaname=`${name} ${surname}`;
+     this.state.name=firstaname;
        event.preventDefault();
        console.log(this.state)
          axios.post('https://code-catalist-phone-book-rails.herokuapp.com/contacts',this.state)
@@ -26,7 +33,7 @@ class AddNumber extends React.Component{
          .catch(error=>{
            console.log(error)
          });
-         
+        
     }
      //handle input
      handleChange=(event)=>{
@@ -34,13 +41,17 @@ class AddNumber extends React.Component{
      this.setState({
        [event.target.name]: event.target.value
      })
+     
    
       }
 
 
 
     render(){
-     const {phone_number}=this.state
+      if (this.state.AddContact===true){
+ 
+      }
+     const {name,phone_number}=this.state
       return(
     <div className="Phonebook" >
             
@@ -60,7 +71,7 @@ class AddNumber extends React.Component{
              required placeholder="John" 
              id="cardCVC" 
              name='name'
-             value={this.state.name}
+             value={name.firstname}
              onChange={this.handleChange}
              />
              </div>
@@ -73,7 +84,7 @@ class AddNumber extends React.Component{
                      required placeholder="Smith" 
                      id="cardCVC"
                      name='surname' 
-                     value={this.state.surname}
+                     value={name.surname}
                      onChange={this.handleChange}
                      />
              </div>
@@ -90,13 +101,13 @@ class AddNumber extends React.Component{
               onChange={this.handleChange}
               /></div>
         </div>
-              
-            <button type="submit" className="btn btn-success button">+ Add Number</button>
-
+          <Link to="/" component={AddContact}>
+            <button type="submit" className="btn btn-success button" onChange={this.handleChange}>+ Add Number</button>
+          </Link>
        </form>
               
       </div>
           )
          }
 }
-export default AddNumber;
+export default withRouter(AddNumber);

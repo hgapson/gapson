@@ -206,6 +206,9 @@ height: 100%;
   .delete{
     color: rgb(248, 100, 100);
   }
+  .items{
+    width: 700px;
+  }
   
 
   
