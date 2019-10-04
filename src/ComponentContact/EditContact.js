@@ -1,17 +1,15 @@
 import React from 'react';
-import AddContact from './AddContact';
-import{Link} from 'react-router-dom';
 import axios from 'axios';
-
-
+import{Link, withRouter} from 'react-router-dom';
+import AddContact from './AddContact';
 
 
 class EditContact extends React.Component{
   constructor(props){
       super(props);
       this.state= {
-       contacts:[]
-     }
+       contacts:[],
+      }
      }
 
      componentDidMount(){
@@ -27,12 +25,17 @@ class EditContact extends React.Component{
        })
      }
 
-     handleSubmit=()=>{
+     handleSubmit=(event)=>{
+      event.preventDefault()
        axios.put('https://code-catalist-phone-book-rails.herokuapp.com/contacts/'+ this.props.match.params.id, this.state)
-       .then((response)=>{
-         console.log(response)
+       .then(()=>{
+          this.props.history.push('/')
+         
        })
-       alert('contact updated')
+       .catch(error=>{
+        console.log(error)
+      });
+       
      }
      
    
@@ -46,8 +49,10 @@ class EditContact extends React.Component{
 
   render(){
       const {name,phone_number}=this.state
+     
         return(
           <div className="Phonebook" >
+
              <Link to="/" component={AddContact}>
                 <i className="fas fa-arrow-left fresh"></i>
               </Link>
@@ -102,4 +107,4 @@ class EditContact extends React.Component{
         )
        }
 }
-export default EditContact;
+export default withRouter (EditContact);

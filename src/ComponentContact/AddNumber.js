@@ -2,6 +2,7 @@ import React from 'react';
 import AddContact from './AddContact';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
 
 
 
@@ -13,7 +14,7 @@ class AddNumber extends React.Component{
          name:"",
          phone_number:"",
          firstname:'',
-         surname:'',
+         surname:''
          
        };
        }
@@ -28,12 +29,15 @@ class AddNumber extends React.Component{
        console.log(this.state)
          axios.post('https://code-catalist-phone-book-rails.herokuapp.com/contacts',this.state)
          .then(Response=>{
-           alert('Contact Well Saved')
+          this.setState({ onRedirect: true });
+           
          })
+
          .catch(error=>{
            console.log(error)
          });
-        
+         
+         
     }
      //handle input
      handleChange=(event)=>{
@@ -48,7 +52,8 @@ class AddNumber extends React.Component{
      const {name,phone_number}=this.state
       return(
     <div className="Phonebook" >
-            
+               { this.state.onRedirect && <Redirect to="/" /> }
+
             <Link to="/" component={AddContact}>
         <i className="fas fa-arrow-left fresh"></i>
         </Link>
@@ -61,7 +66,7 @@ class AddNumber extends React.Component{
            <div className="form-name">
              <label>Name</label>
              <input className="form-control" 
-             type="tel" 
+             type="" 
              required placeholder="John" 
              id="cardCVC" 
              name='name'
@@ -74,7 +79,7 @@ class AddNumber extends React.Component{
            <div className="sname form-name">
                <label>Surname</label>
                <input className="form-control" 
-                     type="tel" 
+                     type="" 
                      required placeholder="Smith" 
                      id="cardCVC"
                      name='surname' 
@@ -87,7 +92,7 @@ class AddNumber extends React.Component{
            <div className="form-number number">
              <label>Mobile</label>
              <input className="form-control" 
-             type="tel"
+             type=""
               required placeholder="+111 1111 1111" 
               id="cardCVC" 
               name='phone_number'

@@ -1,7 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -37,32 +36,32 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## sources used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+in this project i used bootstrap studio and font-awasome resource
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `how project work`
+this project has three pages
 
-### Code Splitting
+* `add contact page`
+this is the page where you can find all contact list with `edit`button, `delete`button, `add contact`button and `display function`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### `edit button`
+this the button that used when you want to update contact and when you click it take you direct on `update page`
 
-### Analyzing the Bundle Size
+### `delete`
+this the button that used when you want to update contact and when you click it remove a contact you want to remove
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### `add contact button`
+this the button that used when you want to add new contact and when you click,  it take you direct on ` add number page`
 
-### Making a Progressive Web App
+* `Add number page`
+this is the page where you can find form with `input filds`, `placeholder` and `add number`button
+and the add number button is used to save data inserted in input form by clicking and it redirect you on home page (add contact page)
+and there is a fresh icon which take you back on previous page
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+*`update page`
+ this is the page where you can find form with `input filds`, `placeholder` and `edit contact`button
+and the add number button is used to save data inserted in input form by clicking and it redirect you on home page (add contact page) and there is a fresh icon which take you back on previous page
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
