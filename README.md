@@ -50,18 +50,19 @@ this is the page where you can find all contact list with `edit`button, `delete`
 this the button that used when you want to update contact and when you click it take you direct on `update page`
 
 ### `delete`
-this the button that used when you want to update contact and when you click it remove a contact you want to remove and when is well deleted it gives alert message saying that contact deleted
+this the button that used when you want to update contact and when you click it remove a contact you want to remove and when is well deleted it gives alert message saying that contact deleted wich recommend you to press OK so that operation become succeful
 
 ### `add contact button`
 this the button that used when you want to add new contact and when you click,  it take you direct on ` add number page`
 
+
 * `Add number page`
 this is the page where you can find form with `input filds`, `placeholder` and `add number`button
-and the add number button is used to save data inserted in input form by clicking and it redirect you on home page (add contact page)
+and the add number button is used to save data inserted in input form by clicking but you have to get alert of comfirming operation by pressing OK and immediately redirect you on home page (add contact page)
 and there is a fresh icon which take you back on previous page
 
 
 *`update page`
  this is the page where you can find form with `input filds`, `placeholder` and `edit contact`button
-and the add number button is used to save data inserted in input form by clicking and it redirect you on home page (add contact page) and there is a fresh icon which take you back on previous page
+and the add number button is used to save data inserted in input form by clicking but you have to get alert of comfirming updation by pressing OK and immediately  redirect you on home page (add contact page) and there is a fresh icon which take you back on previous page
 

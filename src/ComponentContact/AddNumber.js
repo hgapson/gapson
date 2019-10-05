@@ -1,5 +1,4 @@
 import React from 'react';
-import AddContact from './AddContact';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom'
@@ -22,12 +21,10 @@ class AddNumber extends React.Component{
        
       //submit inputs
    handleSubmit=(event)=>{
-     const {name,surname}=this.state;
-     const firstaname=`${name} ${surname}`;
-     this.state.name=firstaname;
+    var data={name:this.state.firstname+" "+this.state.surname, phone_number:this.state.phone_number}
        event.preventDefault();
        console.log(this.state)
-         axios.post('https://code-catalist-phone-book-rails.herokuapp.com/contacts',this.state)
+         axios.post('https://code-catalist-phone-book-rails.herokuapp.com/contacts',data)
          .then(Response=>{
           this.setState({ onRedirect: true });
            
@@ -36,8 +33,7 @@ class AddNumber extends React.Component{
          .catch(error=>{
            console.log(error)
          });
-         
-         
+         alert('saved')   
     }
      //handle input
      handleChange=(event)=>{
@@ -54,7 +50,7 @@ class AddNumber extends React.Component{
     <div className="Phonebook" >
                { this.state.onRedirect && <Redirect to="/" /> }
 
-            <Link to="/" component={AddContact}>
+            <Link to="/AddContact" >
         <i className="fas fa-arrow-left fresh"></i>
         </Link>
            <section className="camera">
@@ -66,10 +62,10 @@ class AddNumber extends React.Component{
            <div className="form-name">
              <label>Name</label>
              <input className="form-control" 
-             type="" 
+             type="text" 
              required placeholder="John" 
              id="cardCVC" 
-             name='name'
+             name='firstname'
              value={name.firstname}
              onChange={this.handleChange}
              />
@@ -79,7 +75,7 @@ class AddNumber extends React.Component{
            <div className="sname form-name">
                <label>Surname</label>
                <input className="form-control" 
-                     type="" 
+                     type="text" 
                      required placeholder="Smith" 
                      id="cardCVC"
                      name='surname' 
@@ -89,10 +85,10 @@ class AddNumber extends React.Component{
              </div>
         </div>
         <div className="form-row">
-           <div className="form-number number">
+           <div className="form-number">
              <label>Mobile</label>
              <input className="form-control" 
-             type=""
+             type="number"
               required placeholder="+111 1111 1111" 
               id="cardCVC" 
               name='phone_number'

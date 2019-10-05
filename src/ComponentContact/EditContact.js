@@ -35,7 +35,7 @@ class EditContact extends React.Component{
        .catch(error=>{
         console.log(error)
       });
-       
+       alert('updated')
      }
      
    
@@ -76,20 +76,10 @@ class EditContact extends React.Component{
            />
              </div>
             </div>
-          <div className="form-row names">
-         <div className="sname form-name">
-             <label>Surname</label>
-             <input className="form-control" 
-                   type="tel" 
-                   placeholder="Smith" 
-                   name="name" 
-                   value=''
-                   onChange={this.handleChange}
-                   />
-           </div>
-      </div>
-      <div className="form-row">
-         <div className="form-number number">
+          
+      
+      <div className="form-row number">
+         <div className="form-number">
            <label>Mobile</label>
            <input className="form-control" 
            type="tel"

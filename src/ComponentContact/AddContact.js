@@ -77,7 +77,7 @@ class AddContact extends React.Component{
               <div className="row">{errorMessage}</div>
   
               <Link to="/AddNumber">
-                <button type="button" className="btn btn-success">+ Add contact</button>
+                <button type="button" className="btn btn-success button">+ Add contact</button>
               </Link>
            </div>
         </div>
