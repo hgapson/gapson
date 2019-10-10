@@ -50,7 +50,7 @@ class AddNumber extends React.Component{
     <div className="Phonebook" >
                { this.state.onRedirect && <Redirect to="/" /> }
 
-            <Link to="/AddContact" >
+            <Link to="/" >
         <i className="fas fa-arrow-left fresh"></i>
         </Link>
            <section className="camera">
