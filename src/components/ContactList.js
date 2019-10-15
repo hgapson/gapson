@@ -1,61 +1,58 @@
 import React from 'react';
+import Contact from './Contact';
+import {Link} from 'react-router-dom'
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import {getContacts} from '../actions/contactActions';
 
-import { connect } from 'react-redux';
+class Contacts extends React.Component {
+  componentDidMount(){
+    this.props.getContacts();
+  }
+  render() {
+    const { contacts } = this.props;
 
-import {fetchContacts} from '../actions';
+    return (
 
+      <React.Fragment>
+        <h1>
+         Phone book manager
+        </h1>
 
-class PostList extends React.Component{
-    constructor(props){
-        super(props);
-        this.renderList = this.renderList.bind(this);
-    }
+        <div className="row bgsuccess">
+        <div className="col">Name</div>
+        <div className="col">Phone Number</div>
+        <div className="col">Edit</div>
+        <div className="col">Delete</div>
+        </div>
+        {contacts.map(contact =>(
 
-    componentDidMount(){
-        this.props.fetchContacts();
-    }
+         <Contact key={contact.id} contact={contact} />
+        ))}
+       
+          <Link to="/contact/new" >
+          <button type="button" className="btn btn-success button">+ Add contact</button>
+          </Link>
+        
+      </React.Fragment>
+    );
+  }
+}; 
 
-    renderList(){
-
-       return this.props.contacts.map((contact) => {
-           return (
-
-                   <tr key={contact.id}>
-                        <td>{contact.name}</td>
-                        <td>{contact.phone_number}</td>
-                        <td>edit</td>
-                        <td>delete</td>
-                   </tr>
-           )
-       })
-    }
-
-    render(){
-        console.log(this.props.contacts);
-        return (
-            <div>
-            <h1>phonebook management</h1> 
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>NAME</th>
-                            <th>phone NUMBER</th>
-                            <th>EDIT</th>
-                            <th>DELETE</th>
-                        </tr>
-                    {this.renderList()}
-                    </tbody>
-                </table>
-            </div>
-        )
-    }
+Contacts.propTypes = {
+contacts:PropTypes.array.isRequired,
+getContacts:PropTypes.func.isRequired,
+contact: PropTypes.object.isRequired,
+DeleteContact:PropTypes.func.isRequired
 
 }
+const mapStateToProps=(state)=>({
+  contacts:state.contact.contacts
+});
 
-const mapStateToProps =(state)=>{
+export default connect(
+  mapStateToProps,
+  {getContacts}) (Contacts);
+  
 
-    return  {contacts: state.contacts}
 
-}
-
-export default connect(mapStateToProps,{fetchContacts}) (PostList);

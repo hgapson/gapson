@@ -1,11 +1,8 @@
-import { combineReducers } from 'redux';
+import contactReducer from './contactReducer'
+import {combineReducers} from 'redux';
 
-import postReducer from './postReducer';
 
-export default combineReducers ({
-
+export default combineReducers({
+    contact: contactReducer,
     
-
-    contacts: postReducer
-
 })

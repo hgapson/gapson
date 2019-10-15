@@ -1,0 +1,225 @@
+
+main{
+  margin: 0;
+  padding: 0;
+ 
+}
+.container{ 
+  left: 15%;
+  width: 900px;
+  text-align: left;
+  max-height: 100%;
+  padding-bottom: 50px;
+  padding-top: 150px;
+}
+.Phonebook{
+  height: 100px;
+  padding-top: 100px;
+  padding-bottom: 461px;
+  margin-top: -15%;
+}
+
+html{
+height: 100%;
+
+}
+.App {
+    text-align: center;
+  }
+  
+  h1{
+    font-size: 40px;
+    margin-top: 10%;
+    margin-left: 5%;
+    color: black;
+  }
+  
+  .list-group-item{
+    background-color: #80cbc4;
+    width: 150px;
+    color: #eceff1;
+    border: none;
+    position: relative;
+    top: 15%;
+  }
+  
+  
+  
+  
+  
+  
+  header{
+    background-color: #eceff1;
+    position: fixed;
+    width: 1600px;
+    height: 90px;
+    top: 0;
+  }
+  #coppy{
+   
+    background-color: #000;
+    width: 1535px;
+    height: 35px;
+    bottom: 0;
+    position: fixed;
+    color: #eceff1;
+    font-size: 14px;
+  }
+  .call{
+      background-color: black;
+      border: 1px solid;
+      border-radius: 90px;
+      width: 50px;
+      height: 50px;
+      position:  relative ;
+      top: 25px;
+      margin-left: 8.4%;
+  }
+  .fa-phone{
+      font-size: 20px;
+      transform: rotate(90deg);
+      color: white;
+      position: relative;
+      top: 11px;
+      left: 2px;
+  }
+  .iconD{
+        position: relative;
+        top:-10%;
+        width: 50px;
+        font-size: 20px;
+        margin-left: 10.6%;
+        margin-top: -0.5%;
+  }
+  
+  .info{
+      position: relative;
+    text-align: right;
+    margin-right: 10%;
+    margin-top: -7%;
+  }
+  .profile{
+   font-size: 40px;
+   margin-top: 1%;
+   margin-right: -3%;
+  }
+  .person{
+    width: 100px;
+  }
+  .name{
+    font-size: 13px;
+    margin-right: 4%;
+  }
+  .fa-angle-down{
+    color: #4dd0e1;
+  }
+  .fresh{
+      font-size: 40px;
+      position: fixed;
+      color: #eceff1;
+      position: relative;
+      left: 11%;
+      top: 18px;
+  }
+  .all{
+    width: 600px;
+    position: relative;
+    left: 17%;
+    top: 15%;
+  }
+  
+  form{
+    width: 116px;
+      margin-top: -10%;
+      margin-left: 34%;
+  }
+  
+  .form-row{
+    margin-left: 30%;
+    
+  }
+  .form-control{
+    width: 350px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  label{
+    margin-left: 2%;
+  }
+  .phone{
+      margin-left: -17%;
+      margin-top: 3%;
+  }
+ 
+
+  
+  section{
+      width: 150px;
+      height: 150px;;
+      align-items: center;
+      margin-left: 25%;
+      margin-top: 4%;
+      background-color: #263238;
+  }
+  .camera{
+     font-size: 100px;
+     margin-left:14%;
+     margin-top: 10%;
+     color: aliceblue;
+  }
+  .btn-success{
+    margin-left: 2%;
+    margin-top: 7%;
+  }
+  
+  
+  .copyright{
+    text-align: center;
+  }
+  .point{
+    color: rgb(228, 231, 8);
+    font-size: 36px;
+    position: relative;
+    top: -30px;
+    left: -39%;
+  }
+  .yellow{
+    color: yellow;
+  }
+  
+  .bgsuccess{
+    width: 700px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: #4dd0e1;
+  }
+  .row{
+    width: 700px;
+  }
+
+ p1{
+   color: white;
+   font-size: 12px;
+ }
+  .edit{
+    color: #000;
+  }
+  .delete{
+    color: rgb(248, 100, 100);
+  }
+  .items{
+    width: 700px;
+  } 
+  
+ .editing{
+   padding-left: 5%;
+ }
+
+.fa {
+  font-weight: 800;
+  margin-left: 16%;
+  margin-top: 16%;
+}
+  
