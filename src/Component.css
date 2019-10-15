@@ -222,4 +222,17 @@ height: 100%;
   margin-left: 16%;
   margin-top: 16%;
 }
+#footer{
+  bottom: -10;
+  /* position: fixed; */
+  background: black;
+  text-align: center;
+  margin-top: 19%;
+  padding: 10px;
+
+}
+p{
+  color: grey;
+  font-family: raleway;
+}
   
