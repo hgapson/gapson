@@ -8,26 +8,28 @@ import {addContact} from '../actions/contactActions';
 
 class AddContact extends Component {
   state = {
-    name: '',
+    firstname: '',
     phone_number: '',
+    surname:'',
     errors: {}
   };
 
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { name, phone_number, errors } = this.state;
+    const { firstname,surname,phone_number, errors } = this.state;
 
     const newContact = {
-      name,
-      phone_number,
+      name: firstname+ ' ' +surname,
+      phone_number: phone_number,
       errors
     };
 
    this.props.addContact(newContact)
     this.setState({
-      name: '',
+      firstname: '',
       phone_number: '',
+      surname:'',
       errors: {}
     });
 
@@ -38,7 +40,7 @@ class AddContact extends Component {
 
 
   render() {
-    const { name,phone_number } = this.state;
+    const { firstname,surname,phone_number } = this.state;
 
     return (
       <div className="Phonebook" >
@@ -60,8 +62,8 @@ class AddContact extends Component {
              type="text" 
              required placeholder="John" 
              id="cardCVC" 
-             name='name'
-             value={name}
+             name='firstname'
+             value={firstname}
              onChange={this.onChange}
              
              />
@@ -75,7 +77,7 @@ class AddContact extends Component {
                      required placeholder="Smith" 
                      id="cardCVC"
                      name='surname' 
-                     value={name.surname}
+                     value={surname}
                      onChange={this.onChange}
                      />
              </div>
