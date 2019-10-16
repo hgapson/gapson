@@ -5,7 +5,6 @@ import AddContact from './components/AddContact';
 import EditContact from './components/EditContact';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 import {Provider} from 'react-redux';
 import store from './store';
 import './Component.css';

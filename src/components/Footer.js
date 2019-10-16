@@ -7,11 +7,10 @@ function Footer(){
    
     return(
         
-        <footer id="footer">
-      
-<p> &copy; All rights are reserved</p>
-    
-</footer>
+        <footer id='coppy'>
+            <p>&copy; 2019 django All rights reserved &nbsp; &nbsp; &nbsp;</p>
+        
+        </footer>
           
                
               );

@@ -2,7 +2,7 @@ import React from 'react';
 import Contact from './Contact';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import {getContacts} from '../actions/contactActions';
 
 class Contacts extends React.Component {
@@ -16,7 +16,7 @@ class Contacts extends React.Component {
 
       <React.Fragment>
         <h1>
-         Phone book manager
+        PHONEBOOK MANAGEMENT
         </h1>
 
         <div className="row bgsuccess">
@@ -40,10 +40,10 @@ class Contacts extends React.Component {
 }; 
 
 Contacts.propTypes = {
-contacts:PropTypes.array.isRequired,
-getContacts:PropTypes.func.isRequired,
-contact: PropTypes.object.isRequired,
-DeleteContact:PropTypes.func.isRequired
+contacts:propTypes.array.isRequired,
+getContacts:propTypes.func.isRequired,
+contact: propTypes.object.isRequired,
+DeleteContact:propTypes.func.isRequired
 
 }
 const mapStateToProps=(state)=>({

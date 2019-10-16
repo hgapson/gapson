@@ -36,6 +36,7 @@ class AddContact extends Component {
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
+
   render() {
     const { name,phone_number } = this.state;
 

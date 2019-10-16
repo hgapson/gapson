@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {DeleteContact} from '../actions/contactActions';
 
@@ -40,8 +40,8 @@ this.props.DeleteContact(id);
   }
   
   Contact.propTypes = {
-    contact: PropTypes.object.isRequired,
-    DeleteContact:PropTypes.func.isRequired
+    contact: propTypes.object.isRequired,
+    DeleteContact:propTypes.func.isRequired
   };
   
   export default connect(null,{DeleteContact}) (Contact);

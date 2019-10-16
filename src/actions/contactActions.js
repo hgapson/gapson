@@ -29,8 +29,8 @@ export const DeleteContact= (id) => async dispatch=> {
             type:DELETE_CONTACT,
             payload:id
             });
+            
     }
-   
         }
 export const addContact=(contact)=> async dispatch=>{
     const response= await Axios.post('https://code-catalist-phone-book-rails.herokuapp.com/contacts/',contact)

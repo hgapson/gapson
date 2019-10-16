@@ -3,7 +3,7 @@ import {GET_CONTACTS,DELETE_CONTACT, ADD_CONTACT,GET_CONTACT,UPDATE_CONTACT} fro
 
 const initialState ={
     contacts:[],
-    contact:{} // this represents a current contact which is viewed
+    contact:{} 
 };
 
 export default (state=initialState,action) =>{
